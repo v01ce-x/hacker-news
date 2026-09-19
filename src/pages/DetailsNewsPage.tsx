@@ -1,9 +1,5 @@
 const DetailsNewsPage = () => {
-  return (
-    <>
-      <h1>Details News Page</h1>
-    </>
-  );
+  return <></>;
 };
 
 export default DetailsNewsPage;

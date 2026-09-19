@@ -1,9 +1,7 @@
+import { NewsCard } from '@/shared/ui';
+
 const NewsPage = () => {
-  return (
-    <>
-      <h1>News Page</h1>
-    </>
-  );
+  return <NewsCard />;
 };
 
 export default NewsPage;
