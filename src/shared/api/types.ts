@@ -9,3 +9,13 @@ export interface Story {
   type: string;
   url: string;
 }
+
+export interface Comment {
+  id: number;
+  by?: string;
+  time: number;
+  text?: string;
+  kids?: number[];
+  deleted?: boolean;
+  dead?: boolean;
+}

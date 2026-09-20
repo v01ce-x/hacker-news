@@ -1,0 +1,35 @@
+.comment {
+    margin: 12px 0 0 16px;
+    padding-left: 16px;
+
+    border-left: 2px solid var(--muted-text);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    font-size: 0.9rem;
+
+    color: #64748b;
+
+    gap: 8px;
+}
+
+.button {
+    color: #ea580c;
+    font-size: 0.8rem;
+}
+
+.text {
+    font-size: 0.95rem;
+    line-height: 1.4;
+
+    margin: 6px 0;
+}
+
+.isLoading {
+    font-size: 0.8rem;
+
+    color: var(--muted-text);
+}

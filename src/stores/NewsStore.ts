@@ -1,11 +1,11 @@
 import { makeAutoObservable, runInAction } from 'mobx';
 import { hackerNewsApi, type Story } from '@/shared/api';
 
-export class NewsStore {
+class NewsStore {
   private timerId: number | null = null;
 
   news: Story[] | [] = [];
-  isLoading: boolean = false;
+  isLoading: boolean;
 
   constructor() {
     makeAutoObservable(this);
@@ -14,22 +14,23 @@ export class NewsStore {
   fetchNews = async () => {
     try {
       this.isLoading = true;
-      const data = await hackerNewsApi.fetchTopNews();
+      const response = await hackerNewsApi.fetchTopNews();
 
       runInAction(() => {
-        this.news = data;
-        this.isLoading = false;
+        this.news = response;
       });
     } catch (error) {
       console.log(error);
     } finally {
-      this.isLoading = false;
+      runInAction(() => {
+        this.isLoading = false;
+      });
     }
   };
 
   startAutoRefresh = () => {
     void this.fetchNews();
-    this.timerId = window.setInterval(this.fetchNews, 60000);
+    this.timerId = window.setInterval(this.fetchNews, 60000000);
   };
 
   stopAutoRefresh = () => {
@@ -40,6 +41,6 @@ export class NewsStore {
   };
 }
 
-export const newsStore = new NewsStore();
+const newsStore = new NewsStore();
 
 export const useNewsStore = () => newsStore;

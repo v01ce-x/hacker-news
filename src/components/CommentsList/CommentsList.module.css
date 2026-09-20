@@ -1,0 +1,14 @@
+.commentsEmpty {
+    color: #666;
+}
+
+.container {
+    margin-top: 24px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}

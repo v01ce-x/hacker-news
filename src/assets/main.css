@@ -13,7 +13,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    margin-top: 50px;
+    margin: 50px 0;
 }
 
 @keyframes skeleton-pulse {
@@ -50,4 +50,29 @@ body {
     background: linear-gradient(90deg, transparent, rgba(0, 247, 255, 0.1), transparent);
 
     animation: skeleton-shine 1.8s infinite;
+}
+
+.button {
+    padding: 10px;
+
+    border: 1px solid var(--border);
+    border-radius: 8px;
+
+    transition: 0.3s;
+
+    &:not(:disabled):hover {
+        background-color: var(--card-bg);
+        box-shadow: 5px 5px 15px -10px var(--accent-text);
+
+        padding: 8px 10px 12px;
+    }
+
+    &:not(:disabled):active {
+        padding: 10px;
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
 }
