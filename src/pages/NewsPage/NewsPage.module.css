@@ -1,0 +1,8 @@
+.news__list {
+    display: grid;
+
+    width: 100%;
+    max-width: 900px;
+
+    row-gap: 12px;
+}

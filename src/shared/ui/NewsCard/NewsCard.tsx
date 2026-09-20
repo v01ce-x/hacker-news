@@ -1,17 +1,25 @@
 import styles from './NewsCard.module.css';
+import type { Story } from '@/shared/api';
 
-const NewsCard = () => {
+interface Props {
+  story: Story;
+  counter: number;
+}
+
+const NewsCard = (props: Props) => {
+  const { story, counter } = props;
+
   return (
     <article className={styles.card}>
-      <span className={styles.counter}>1.</span>
+      <span className={styles.counter}>{counter}.</span>
       <div className={styles.content}>
-        <h3 className={styles.title}>Название</h3>
+        <h3 className={styles.title}>{story.title}</h3>
         <div className={styles.metadata}>
-          <span>Рейтинг</span>
+          <span>Rating {story.score}&#9733;</span>
           <span>•</span>
-          <span>Ник автора</span>
+          <span>by {story.by}</span>
           <span>•</span>
-          <span>Дата публикации</span>
+          <span>{new Date(story.time).toLocaleDateString('ru-RU')}</span>
         </div>
       </div>
     </article>
