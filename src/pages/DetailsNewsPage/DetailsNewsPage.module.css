@@ -1,35 +1,35 @@
 .container {
-    display: grid;
+  display: grid;
 
-    width: 100%;
-    max-width: 900px;
+  width: 100%;
+  max-width: 900px;
 
-    row-gap: 12px;
+  row-gap: 12px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    row-gap: 8px;
+  row-gap: 8px;
 }
 
 .metadata {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 
-    width: 100%;
-    font-size: 1.1rem;
+  width: 100%;
+  font-size: 1.1rem;
 }
 
 .title {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 
-    color: var(--accent-text);
+  color: var(--accent-text);
 }
 
 .link {
-    display: inline;
-    text-decoration: underline;
+  display: inline;
+  text-decoration: underline;
 }

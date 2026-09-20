@@ -1,52 +1,52 @@
 .card {
-    display: flex;
-    align-items: flex-start;
+  display: flex;
+  align-items: flex-start;
 
-    width: 100%;
-    max-width: 900px;
+  width: 100%;
+  max-width: 900px;
 
-    background-color: var(--card-bg);
+  background-color: var(--card-bg);
 
-    padding: 16px;
-    column-gap: 12px;
+  padding: 16px;
+  column-gap: 12px;
 
-    border: 1px solid var(--border);
-    border-radius: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
 
-    transition: 0.3s;
-    cursor: pointer;
+  transition: 0.3s;
+  cursor: pointer;
 
-    &:hover {
-        background-color: var(--card-bg-hover);
-        box-shadow: 0 4px 12px rgba(0, 247, 255, 0.1);
-    }
+  &:hover {
+    background-color: var(--card-bg-hover);
+    box-shadow: 0 4px 12px rgba(0, 247, 255, 0.1);
+  }
 }
 
 .counter {
-    font-size: 1.25rem;
-    font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: bold;
 
-    color: var(--accent-text);
+  color: var(--accent-text);
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    row-gap: 8px;
+  row-gap: 8px;
 }
 
 .title {
-    font-size: 1.1rem;
+  font-size: 1.1rem;
 }
 
 .metadata {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 
-    color: var(--muted-text);
+  color: var(--muted-text);
 
-    column-gap: 8px;
+  column-gap: 8px;
 }
