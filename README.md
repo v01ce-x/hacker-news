@@ -21,3 +21,4 @@
    git clone https://github.com/v01ce-x/hacker-news.git .
    yarn
    yarn start
+2. **Создайте файл в корне проекта .env и поместите в него содержимое .env.example
